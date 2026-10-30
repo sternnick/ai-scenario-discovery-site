@@ -1,8 +1,8 @@
-# Research AI Capitalism - published site
+# Research AI Capitalism
 
-This repository holds **the published website only**. It exists so that the rendered site can be
-public while the research code, the retrieved data and the model behind it stay in a private
-backend repository.
+The public website of the *Research AI Capitalism* scenario study. This repository holds **the
+published output only**. It exists so that the rendered site can be public while the research code,
+the retrieved data and the model behind it stay in a private backend repository.
 
 | | |
 |---|---|
