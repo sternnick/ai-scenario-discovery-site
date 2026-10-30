@@ -1,0 +1,90 @@
+/* Styling for the scenario-study site. Purposeful rules only: the disclaimer banner,
+   the probability table, and the confidence labels that must not look like grades. */
+
+#not-a-forecast-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  background: #fff8e1;
+  border-top: 3px solid #f0a500;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+#not-a-forecast-banner.dismissed {
+  display: none;
+}
+
+#not-a-forecast-banner .banner-label {
+  font-weight: 700;
+}
+
+#not-a-forecast-banner button {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Leave room at the bottom of the page so the banner never covers a table. */
+body {
+  padding-bottom: 5rem;
+}
+
+table.scenario-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.scenario-table th,
+table.scenario-table td {
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #ddd;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+table.scenario-table th:first-child,
+table.scenario-table td:first-child {
+  text-align: left;
+}
+
+table.scenario-table tr.overall td {
+  font-weight: 700;
+  background: #f5f7fa;
+}
+
+.confidence-low,
+.confidence-medium,
+.confidence-high {
+  font-weight: 600;
+}
+
+/* Low confidence is the normal state of an assumption here; it is not an error state,
+   so it is emphasised in grey rather than flagged in red. */
+.confidence-low { color: #5b6470; }
+.confidence-medium { color: #345; }
+.confidence-high { color: #23445d; }
+
+.selector-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 1rem;
+  flex-wrap: wrap;
+}
+
+.provenance {
+  font-size: 0.85rem;
+  color: #5b6470;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  word-break: break-all;
+}

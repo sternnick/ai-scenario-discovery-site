@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="The authoritative list of theoretical choices. Every probability in this study is conditional on it.">
+
+<title>Assumptions Register – The Gains from AI</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">The Gains from AI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About the study</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./author.html"> 
+<span class="menu-text">Author</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./methodology.html"> 
+<span class="menu-text">Methodology</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./scenarios.html"> 
+<span class="menu-text">Scenarios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data-sources.html"> 
+<span class="menu-text">Data sources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./assumptions.html" aria-current="page"> 
+<span class="menu-text">Assumptions Register</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/sternnick/ai-scenario-discovery-site" title="" class="quarto-navigation-tool px-1" aria-label="Published site source (built output)"><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-so-many-low-grades" id="toc-why-so-many-low-grades" class="nav-link active" data-scroll-target="#why-so-many-low-grades">Why so many <code>low</code> grades</a></li>
+  <li><a href="#how-to-read-the-numbers-on-this-page" id="toc-how-to-read-the-numbers-on-this-page" class="nav-link" data-scroll-target="#how-to-read-the-numbers-on-this-page">How to read the numbers on this page</a></li>
+  <li><a href="#changing-something-here" id="toc-changing-something-here" class="nav-link" data-scroll-target="#changing-something-here">Changing something here</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assumptions Register</h1>
+</div>
+
+<div>
+  <div class="description">
+    The authoritative list of theoretical choices. Every probability in this study is conditional on it.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Everything on this page is a theoretical placeholder pending a cited basis, not an empirical finding.</strong> Where an entry still has no source, it says so. If a value is neither data nor a derivation from data, it belongs here, and it does not become a fact by appearing in an equation.</p>
+</div>
+</div>
+<p>This page is the published index of the register: which assumptions exist, what kind of reasoning each rests on, and how much the answer moves when one is challenged. The authoritative text - each statement written as it is used in code, with its falsification condition and its dependency links - is <code>03_scenarios/assumptions_register.md</code> in the working repository, which is not public. Where a reader needs the full entry rather than the index row, ask; the register is documentation, not proprietary machinery, and it can be published on this site on request.</p>
+<p><code>Basis</code> is the kind of support: <strong>data</strong> (constrained by observation), <strong>theory</strong> (a mechanism we adopt), <strong>judgment</strong> (a choice we must defend in prose). <code>Confidence</code> is a <strong>sensitivity</strong> grade, not a truth grade: <code>low</code> means “attack this one first”.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Subject</th>
+<th>Basis</th>
+<th>Confidence</th>
+<th>What would show it wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>AS-01</code></td>
+<td>CES substitution between AI capital services and labour</td>
+<td>theory + judgment</td>
+<td>low</td>
+<td>task-level elasticities below the low bound in two independent studies</td>
+</tr>
+<tr class="even">
+<td><code>AS-02</code></td>
+<td>Logistic diffusion of AI capital services, no sustained stall</td>
+<td>judgment</td>
+<td>low</td>
+<td>AI capital formation below the low bound while compute prices keep falling</td>
+</tr>
+<tr class="odd">
+<td><code>AS-03</code></td>
+<td>Reabsorption with a lag, no hysteresis unless switched</td>
+<td>judgment on data-informed priors</td>
+<td>low</td>
+<td>prime-age participation falling 3+ years with unemployment at baseline</td>
+</tr>
+<tr class="even">
+<td><code>AS-04</code></td>
+<td>Concentrated ownership of AI capital, constant MPC out of the gain</td>
+<td>judgment</td>
+<td>low</td>
+<td>measured concentration falling, or MPC out of capital income rising to the threshold</td>
+</tr>
+<tr class="odd">
+<td><code>AS-05</code></td>
+<td>Efficiency learning curve with a rebound response</td>
+<td>theory + judgment</td>
+<td>low</td>
+<td>energy per effective FLOP flat or rising for three years</td>
+</tr>
+<tr class="even">
+<td><code>AS-06</code></td>
+<td>Data-centre electricity share at <code>t = 0</code></td>
+<td>judgment (no resolvable series)</td>
+<td>low</td>
+<td>a published series showing a materially different share</td>
+</tr>
+<tr class="odd">
+<td><code>AS-07</code></td>
+<td>Fiscal squeeze with a monotone ratchet</td>
+<td>theory + judgment</td>
+<td>low</td>
+<td>debt-service ratios recovering after a stress episode</td>
+</tr>
+<tr class="even">
+<td><code>AS-08</code></td>
+<td>Political stability as a stress accumulator that can ratchet</td>
+<td>theory + judgment</td>
+<td>low</td>
+<td>unrest returning to baseline where fiscal space is constrained</td>
+</tr>
+<tr class="odd">
+<td><code>AS-09</code></td>
+<td>Credit transmits to employment only above a leverage threshold</td>
+<td>judgment</td>
+<td>low</td>
+<td>a margin shock above the threshold with no employment response</td>
+</tr>
+<tr class="even">
+<td><code>AS-10</code></td>
+<td>Diminishing marginal return on AI capital, credit-relevant sunk stock</td>
+<td>theory</td>
+<td>low</td>
+<td>margins above financing cost while the installed stock triples</td>
+</tr>
+<tr class="odd">
+<td><code>AS-11</code></td>
+<td>How scenario probabilities are communicated (hash, seed, N always attached)</td>
+<td>judgment</td>
+<td>low</td>
+<td>a probability quoted without its hash, or a non-reproducible rerun</td>
+</tr>
+<tr class="even">
+<td><code>AS-12</code></td>
+<td>Scenario boundaries, the interaction window, and the tie rule</td>
+<td>judgment</td>
+<td>low</td>
+<td>a modest threshold change reordering the scenario ranking - expected, which is why sensitivity is mandatory</td>
+</tr>
+<tr class="odd">
+<td><code>AS-13</code></td>
+<td>Independent sampling across sectors, common random numbers</td>
+<td>judgment</td>
+<td>low</td>
+<td>strong co-movement across sectors, which the model omits and which would raise C</td>
+</tr>
+<tr class="even">
+<td><code>AS-14</code></td>
+<td><code>t = 0</code> is 2026; “2031”/“2036” are horizon labels</td>
+<td>convention</td>
+<td>high</td>
+<td>none operational: a convention is changed, not falsified</td>
+</tr>
+<tr class="odd">
+<td><code>AS-15</code></td>
+<td>Wilson intervals: sampling noise only</td>
+<td>theory</td>
+<td>medium</td>
+<td>anyone citing the interval as structural uncertainty</td>
+</tr>
+<tr class="even">
+<td><code>AS-16</code></td>
+<td>Sector indices normalised to 1.0 at the latest observation</td>
+<td>data + theory</td>
+<td>medium</td>
+<td>a revision moving a seed level by more than 2%</td>
+</tr>
+<tr class="odd">
+<td><code>AS-17</code></td>
+<td>A world aggregate is adequate for a distributional question</td>
+<td>judgment</td>
+<td>low</td>
+<td>a country-panel replication with systematically different shares</td>
+</tr>
+</tbody>
+</table>
+<section id="why-so-many-low-grades" class="level2">
+<h2 class="anchored" data-anchor-id="why-so-many-low-grades">Why so many <code>low</code> grades</h2>
+</section>
+<section id="how-to-read-the-numbers-on-this-page" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-the-numbers-on-this-page">How to read the numbers on this page</h2>
+<p>Two numbers appear next to every probability here, and they mean opposite things. The <strong>Wilson interval</strong> (about +-0.01 at N = 10,000) measures only sampling noise: it says how precisely this run estimated the share of draws that landed in a scenario region, and it shrinks if we run more draws of the same assumptions - it says nothing about whether those assumptions are right. The <strong>sensitivity swing</strong> (up to 0.36 at <code>t = 10</code>) measures how far the answer moves when one assumption is moved across the range its own register entry declares: that is structural uncertainty, and it does not shrink with more draws, only with better evidence. So quote the swing, not the interval, when describing uncertainty - a table whose intervals are narrow is a table that has been computed carefully, not a table that is safe to believe. The swings below are one-at-a-time perturbations of the parameters in <code>model_params.yaml</code>, so they do not add up and they do not describe joint moves.</p>
+<p>The one-at-a-time run at <code>t = 10</code> (<code>02_analysis/outputs/sensitivity_t10.csv</code>) reports the largest swings as:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Largest swing in a scenario share at <code>t = 10</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ai_profitability.diffusion_speed</code> (<code>AS-02</code>)</td>
+<td>0.36</td>
+</tr>
+<tr class="even">
+<td><code>energy.rebound_coefficient</code> (<code>AS-05</code>)</td>
+<td>0.32</td>
+</tr>
+<tr class="odd">
+<td><code>thresholds.fiscal_squeeze_trigger</code> (<code>AS-12</code>)</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td><code>ai_profitability.diffusion_ceiling</code> (<code>AS-02</code>)</td>
+<td>0.25</td>
+</tr>
+<tr class="odd">
+<td><code>political_stability.fiscal_sensitivity</code> (<code>AS-08</code>)</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td><code>energy.demand_elasticity</code> (<code>AS-06</code>)</td>
+<td>0.21</td>
+</tr>
+</tbody>
+</table>
+<p>A <code>low</code> confidence grade is therefore not modesty for its own sake: it names the entries whose resolution would actually change the study’s conclusion. Two of the six parameters in the table (<code>AS-05</code> rebound, <code>AS-06</code> demand elasticity) are the kind of number that could in principle be measured; the diffusion parameters (<code>AS-02</code>) can only be argued from earlier general-purpose technologies, which is a judgment about historical analogy, not a measurement.</p>
+</section>
+<section id="changing-something-here" class="level2">
+<h2 class="anchored" data-anchor-id="changing-something-here">Changing something here</h2>
+<ol type="1">
+<li>Add or edit the register row first, with a basis and a falsification condition.</li>
+<li>Set the value in <code>model_params.yaml</code>, which refuses to load if the register ID is missing.</li>
+<li>Record the change in <code>00_docs/04_changelog.md</code> with the old and new value.</li>
+<li>Re-run <code>build_lookup.py</code>; the <code>model_params_hash</code> changes, and with it every probability.</li>
+</ol>
+<p>Quoting an old probability after an edit is a citation error, not a rounding difference.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Persistent disclaimer. Rendered on every page via include-after-body in _quarto.yml.
+     It is fixed rather than inline so that a screenshot of any table on any page still
+     carries the sentence that makes the numbers meaningful. -->
+<div id="not-a-forecast-banner" role="note" aria-label="Nature of this study">
+  <span class="banner-label">Theoretical scenario study. Not a forecast.</span>
+  Probabilities are conditional on assumptions listed in the Assumptions Register.
+  <a href="./assumptions.html">Register</a>
+  <a href="./about.html">Why this wording is mandatory</a>
+  <button type="button" aria-label="Dismiss banner" onclick="document.getElementById('not-a-forecast-banner').classList.add('dismissed')">×</button>
+</div>
+<script>
+  // One banner per browser session, not one per page load: the point is that the sentence
+  // is never absent from a reader's view of a probability, not that it is annoying.
+  if (sessionStorage.getItem("banner-dismissed") === "1") {
+    document.getElementById("not-a-forecast-banner").classList.add("dismissed");
+  }
+  document.querySelector("#not-a-forecast-banner button")
+    .addEventListener("click", function () { sessionStorage.setItem("banner-dismissed", "1"); });
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sternnick\.github\.io\/ai-scenario-discovery-site\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>The Gains from AI - theoretical scenario study, version 0.2.1</p>
+</div>   
+    <div class="nav-footer-center">
+<p><strong>Theoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the <a href="./assumptions.html">Assumptions Register</a>.</strong></p>
+</div>
+    <div class="nav-footer-right">
+<p>© 2026 [AUTHOR NAME - TO BE CONFIRMED]. Text: CC BY 4.0. Code: MIT.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

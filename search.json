@@ -1,0 +1,289 @@
+[
+  {
+    "objectID": "author.html",
+    "href": "author.html",
+    "title": "Author and credibility",
+    "section": "",
+    "text": "Important\n\n\n\nTheoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the Assumptions Register."
+  },
+  {
+    "objectID": "author.html#who-maintains-this-study",
+    "href": "author.html#who-maintains-this-study",
+    "title": "Author and credibility",
+    "section": "Who maintains this study",
+    "text": "Who maintains this study\nThis study is maintained by [AUTHOR NAME - TO BE CONFIRMED], who wrote the specification, the transition model, the ingestion layer and this website, and who is the single point of contact for corrections. ORCID: [ORCID iD - TO BE CONFIRMED]. Affiliation: [AFFILIATION - TO BE CONFIRMED]. Contact: open an issue on the issues on the published-site repository, which is the channel that leaves a public record and the one place a reader can reach without the working repository. That matters for a study whose whole subject is traceability: a correction request that sits in a private issue tracker has the same visibility as the code.\nThese three fields are unresolved on purpose rather than by omission. Their exact values are a human decision, tracked as item C6 in next_steps.md, and I would rather publish an empty slot with a name on it than fill it with something plausible. The same applies to the archive DOI in CITATION.cff (item C2). What the repository does assert about authorship is narrow and checkable: the commit author identity in git log and the copyright line in LICENSE."
+  },
+  {
+    "objectID": "author.html#how-this-was-built-and-what-did-the-work",
+    "href": "author.html#how-this-was-built-and-what-did-the-work",
+    "title": "Author and credibility",
+    "section": "How this was built, and what did the work",
+    "text": "How this was built, and what did the work\nThe specification, the sector structure, the scenario definitions and every judgment in the Assumptions Register are the author’s. The code was written with an AI coding assistant: the ingestion layer, the transition model, the Monte Carlo runner, the tests and this site were drafted and revised in conversation with a tool, then run, read and corrected by the author. Every commit in the working repository is authored by a human, and nothing about that is hidden here.\nWhat that tool did not do, and what matters for a reader: it produced no number. There is no model inference, no retrieval-augmented claim, and no LLM opinion anywhere in the pipeline. A probability on this site is the output of transition_model.py run 10,000 times over model_params.yaml, and the arithmetic is deterministic: same parameters, same baseline, same seed, same table. The exclusion in About the study - “no opinion aggregation, no LLM panels” - is about where a probability may come from, and it still holds: the assistant was asked to write and check code, never what it thinks will happen.\nSo the honest summary of the method is: human judgment about the structure, machine help with the typing, arithmetic doing the rest."
+  },
+  {
+    "objectID": "author.html#what-you-can-check-instead-of-taking-my-word-for-it",
+    "href": "author.html#what-you-can-check-instead-of-taking-my-word-for-it",
+    "title": "Author and credibility",
+    "section": "What you can check instead of taking my word for it",
+    "text": "What you can check instead of taking my word for it\n\n\n\nClaim you might otherwise have to trust\nWhere it is checkable\n\n\n\n\nThe numbers came from one fixed set of parameters and one fixed model, not from ad hoc arithmetic\nthe model_params_hash and model_code_hash printed under every probability table, and data/scenario_lookup.json served unmodified\n\n\nThe published tables are what the pipeline produced\nthe gh-pages branch of https://github.com/sternnick/ai-scenario-discovery-site, which is the built output itself\n\n\nNothing was interpolated or quietly filled in\nthe Data sources page states the rule (gaps stay missing) and the missingness report is available from the author; the underlying gap pattern is visible in the published series years\n\n\nWhich numbers are observations and which are choices\nthe Assumptions Register and 01_data/metadata/source_register.csv\n\n\nWhat failed, not only what worked\n00_docs/02_data_sources.md (endpoint probes that returned 404) and next_steps.md\n\n\nWhether the published site matches the source it was built from\nthe deploy commit in the site repository names the backend commit it was rendered from; the CI gate that refuses to publish a stale scenario_lookup.json runs in the private pipeline and its result is visible on the Actions tab there"
+  },
+  {
+    "objectID": "author.html#standing-of-this-work-stated-plainly",
+    "href": "author.html#standing-of-this-work-stated-plainly",
+    "title": "Author and credibility",
+    "section": "Standing of this work, stated plainly",
+    "text": "Standing of this work, stated plainly\nThere is no peer review behind it, no institutional endorsement, no funding statement, and no dataset of our own: the empirical content is other people’s published statistics, re-read. The model’s arithmetic is deliberately simple and fully exposed, because a scenario study earns attention by being falsifiable, not by being sophisticated. Its useful output is the Assumptions Register plus the sensitivity table: those two tell a reader which claims would survive an argument, and which are one threshold wide.\nIf you are going to cite it, cite it as CITATION.cff specifies, and quote a probability together with its model_params_hash, model_code_hash, seed and N. Those four tokens are the difference between a citation and a rumour."
+  },
+  {
+    "objectID": "data-sources.html",
+    "href": "data-sources.html",
+    "title": "Data sources",
+    "section": "",
+    "text": "Important\n\n\n\nTheoretical scenario study. Not a forecast. Only observations of closed periods appear in the baseline; projections are excluded by rule, so no future value enters a simulation."
+  },
+  {
+    "objectID": "data-sources.html#status-at-a-glance",
+    "href": "data-sources.html#status-at-a-glance",
+    "title": "Data sources",
+    "section": "Status at a glance",
+    "text": "Status at a glance\n\n\n\n\n\n\n\n\nProvider\nInterface\nStatus on 2026-10-28\n\n\n\n\nWorld Bank\nJSON v2 API (api.worldbank.org/v2), plus SDMX via sdmx1 where available\nWorking. 8 series retrieved for the world aggregate; API lastupdated read 2026-10-08\n\n\nIMF\nSDMX REST via sdmx1\nEndpoint path unresolved. Host reachable, the two paths we probed returned HTTP 404\n\n\nOECD\nSDMX 2.1 / 3.0 REST via sdmx1\nEndpoint path unresolved. Host live, probed dataflow returned HTTP 404; the portal has relocated endpoints before\n\n\nIEA\nbrowser export or key-gated API\nNot reachable from this host (dataroom.iea.org connection failed); API access requires a named key and restricts redistribution\n\n\n\nAn ingestion run against IMF, OECD or IEA today is expected to fail into the documented cache-fallback path and log a warning; that behaviour is tested, so a failure is visible instead of looking like a result."
+  },
+  {
+    "objectID": "data-sources.html#what-is-actually-in-the-baseline",
+    "href": "data-sources.html#what-is-actually-in-the-baseline",
+    "title": "Data sources",
+    "section": "What is actually in the baseline",
+    "text": "What is actually in the baseline\nRetrieved 2026-10-28 with 02_analysis/scripts/ingest/fetch_sdmx.py, reference area WLD, recorded per-series in 01_data/metadata/source_register.csv. The raw files themselves are not committed: they live in the external archive and are referenced by DOI.\n\n\n\n\n\n\n\n\n\n\n\nSource\nIndicator code\nVariable name\nUnit\nLatest observation\nStatus\n\n\n\n\nWorld Bank WDI\nNY.GDP.MKTP.KD.ZG\ngdp_real_growth\nannual %\n2025 (2.9213)\ndata - drives the trend counterfactual\n\n\nWorld Bank WDI\nNY.GDP.MKTP.CD\ngdp_nominal_usd\ncurrent US$\n2025 (1.18350e14)\ndata\n\n\nWorld Bank WDI\nSL.UEM.TOTL.ZS\nunemployment_rate\n% of labour force\n2025 (4.7913)\ndata - ILO modelled, so treat as inference when used as a trend\n\n\nWorld Bank WDI\nSL.TLF.TOTL.IN\nlabour_force_total\npersons\n2025 (3.7366e9)\ndata\n\n\nWorld Bank WDI\nEG.USE.PCAP.KG.OE\nenergy_use_per_capita\nkg oil eq. per capita\n2024 (1892.16)\ndata, one-year lag, not consumed at t = 0\n\n\nWorld Bank WDI\nSP.POP.TOTL\npopulation_total\npersons\n2025 (8.2154e9)\ndata\n\n\nWorld Bank WDI\nSP.DYN.TFRT.IN\nfertility_rate\nbirths per woman\n2024 (2.1883)\ndata, not consumed\n\n\nWorld Bank WDI\nIT.NET.BBND.P2\nfixed_broadband_per_100\nper 100 people\n2025 (20.11)\ndata, weak diffusion proxy, coverage gaps after 2020\n\n\nOECD\n[TO BE VERIFIED]\nlabour_share_gdp\n% of GDP\n[TO BE VERIFIED]\nthe most important missing input in this study\n\n\nIMF\n[TO BE VERIFIED]\ngov_expenditure_gdp\n% of GDP\n[TO BE VERIFIED]\ncandidate for the public-finance seed\n\n\nIEA\n[TO BE VERIFIED]\nelectricity_demand_data_centres\nTWh\n[TO BE VERIFIED]\nif unobtainable, becomes assumption AS-06 and is labelled as such\n\n\n\nNo indicator code was invented for any row marked TO BE VERIFIED. Codes that failed to resolve were probed and recorded as failures in 00_docs/02_data_sources.md section 4, so the next attempt starts from a measurement."
+  },
+  {
+    "objectID": "data-sources.html#provenance-per-retrieval",
+    "href": "data-sources.html#provenance-per-retrieval",
+    "title": "Data sources",
+    "section": "Provenance per retrieval",
+    "text": "Provenance per retrieval\n01_data/metadata/source_register.csv is written by the ingestion script and never by hand:\nretrieved_at, provider, indicator_code, variable_name, endpoint_url, http_status, params,\nlatest_observation_period, n_observations, raw_file, raw_sha256, cache_fallback_used,\ncache_age_days, warning\nA row with cache_fallback_used = true states that the file on disk is older than the run date and points at the log line that explains why. A simulation that starts from a seed value older than the tolerated vintage stops with gate G5 rather than quietly continuing."
+  },
+  {
+    "objectID": "data-sources.html#missingness-honestly",
+    "href": "data-sources.html#missingness-honestly",
+    "title": "Data sources",
+    "section": "Missingness, honestly",
+    "text": "Missingness, honestly\n01_data/processed/missingness_report.csv reports, per variable: first and last year, count and share of interior gaps, whether the series trails the axis, the seed lag in years, and a status (OK, GAP, TRAILING, BLOCKING, CONFLICT). Nothing is interpolated: gaps are carried into the analysis as gaps, and a variable that two sources disagree about is reported as a conflict instead of being averaged."
+  },
+  {
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "Methodology",
+    "section": "",
+    "text": "Important\n\n\n\nTheoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the Assumptions Register."
+  },
+  {
+    "objectID": "methodology.html#the-pipeline",
+    "href": "methodology.html#the-pipeline",
+    "title": "Methodology",
+    "section": "The pipeline",
+    "text": "The pipeline\nofficial APIs (World Bank, IMF, OECD, IEA)\n   fetch_sdmx.py            append-only raw writes + provenance row\n01_data/raw/                 [DATA]\n   build_processed.py       contiguous year axis, no interpolation, missingness report\n01_data/processed/baseline.csv\n   transition_model.Baseline   newest observation per variable, plus its vintage year\n   transition(t, baseline, params)   params &lt;- model_params.yaml, never typed in code\n   scenario_rule(state)      exactly one label per state\n   run_monte_carlo.py        N = 10,000 draws, common random numbers, seed recorded\n02_analysis/outputs/mc_results_t{t}.csv  (+ sidecar JSON with seed and hashes)\n   build_lookup.py           horizons 1..10 in one process\n05_website/data/scenario_lookup.json\n   quarto render\n_site/\nThe two observed quantities that drive the path are the pre-AI trend growth rate and the observed unemployment rate; both enter the transition function as data, which is what licenses the rest of the arithmetic to call itself an inference."
+  },
+  {
+    "objectID": "methodology.html#the-three-categories-and-the-rule-that-keeps-them-apart",
+    "href": "methodology.html#the-three-categories-and-the-rule-that-keeps-them-apart",
+    "title": "Methodology",
+    "section": "The three categories, and the rule that keeps them apart",
+    "text": "The three categories, and the rule that keeps them apart\n\n\n\n\n\n\n\n\n\nCategory\nDefinition\nMay an analyst change it?\nExample here\n\n\n\n\nData (observed)\nPublished about a closed period\nonly by re-retrieval, which is a new dated row\nworld GDP growth, WDI NY.GDP.MKTP.KD.ZG, 2025 = 2.92%\n\n\nInference (derived)\nComputed from data by a stated transformation\nyes, but the transformation is then reviewed code\nthe t = 0 labour-income index normalised to 1.0\n\n\nAssumption (theoretical choice)\nEverything else: elasticities, thresholds, reference year, tie rule\nonly via a register edit and a changelog entry\nthe substitution elasticity sigma_sub\n\n\n\nContainment: an assumption never appears in a table labelled observed; a data value never appears in the register. Inheritance: a derived value takes the weakest status of its inputs, so a clean algebra on assumed parameters yields an assumption, not a fact."
+  },
+  {
+    "objectID": "methodology.html#what-a-probability-here-means",
+    "href": "methodology.html#what-a-probability-here-means",
+    "title": "Methodology",
+    "section": "What a probability here means",
+    "text": "What a probability here means\nP(scenario | structure, parameter distributions, assumptions). It is the share of draws whose simulated state at horizon t falls in the region that the scenario files define. The distribution being averaged over is the assumption set, so:\n\nChanging assumptions changes probabilities. The Assumptions Register is the authoritative list of those choices, and a probability is identified by the SHA-256 of the parameter file that produced it.\n\nThe interval reported next to a share is a Wilson score interval on a binomial proportion: sampling noise at N = 10,000. Structural uncertainty is reported separately, as the swing a parameter produces when moved from its low to its high bound: sensitivity.py --horizon 10 writes that table, and its largest entry (0.36, from a single diffusion-speed assumption) is about forty times the width of the sampling interval. Any reader who confuses the two has been mislead by a precision the study does not claim."
+  },
+  {
+    "objectID": "methodology.html#reproducing",
+    "href": "methodology.html#reproducing",
+    "title": "Methodology",
+    "section": "Reproducing",
+    "text": "Reproducing\npip install -r 02_analysis/requirements.txt\npython 02_analysis/scripts/ingest/fetch_sdmx.py --provider worldbank \\\n       --indicator NY.GDP.MKTP.KD.ZG --transport json --start 1990\npython 02_analysis/scripts/ingest/build_processed.py          # exit 5 if a seed value is stale\npython 02_analysis/scripts/ingest/test_ingest.py              # 5 ingestion contracts\npython 02_analysis/scripts/model/transition_model.py          # gates G2, G3 self-check\npython 02_analysis/scripts/model/run_monte_carlo.py --horizon 5 --convergence-check\npython 02_analysis/scripts/model/build_lookup.py\npython 02_analysis/scripts/model/sensitivity.py --horizon 10 --draws 4000\nquarto render 05_website\nA result is reproducible when the seed, the parameter hash, the model code hash, the baseline hash and the git commit in its sidecar all match. The code hash exists because a probability is a function of the arithmetic as much as of the parameters: the same parameter file produced materially different shares before and after the 2026-10-28 channel-normalisation fix, and a citation carrying only model_params_hash could not tell those two runs apart. Reproduce, do not re-run and hope."
+  },
+  {
+    "objectID": "methodology.html#gates-that-stop-a-run",
+    "href": "methodology.html#gates-that-stop-a-run",
+    "title": "Methodology",
+    "section": "Gates that stop a run",
+    "text": "Gates that stop a run\n\n\n\n\n\n\n\n\nGate\nTest\nOn failure\n\n\n\n\nG1 Schema\nevery parameter has all six fields; assumption status must name a register ID\nrefuse to run\n\n\nG2 No hidden coefficients\nno numeric literal in the model outside a marked fixture region and a short allow-list\nrefuse to run\n\n\nG3 Rule partition\nevery edge state receives exactly one label, and the labels are not collapsed\nrefuse to run\n\n\nG4 Convergence\nshares move less than half the CI width when N doubles\nflag as provisional\n\n\nG5 Baseline vintage\nno model-consumed series older than 3 years, no conflict row\nrefuse to run\n\n\nG6 Label discipline\nevery published probability carries the disclaimer\nblock the site build\n\n\nG7 Provenance\nsidecar present and hashes recomputed\nblock the site build"
+  },
+  {
+    "objectID": "methodology.html#honest-gaps-in-this-method",
+    "href": "methodology.html#honest-gaps-in-this-method",
+    "title": "Methodology",
+    "section": "Honest gaps in this method",
+    "text": "Honest gaps in this method\n\nThe transition functions are chosen, not estimated; no backtest is claimed, because a backtest on five years of world aggregates would measure the calibration of a structure we invented.\nScenario C’s coincidence requirement is implemented as a path test over channel-crossing years. At t = 10 it stops discriminating, and the parameter that actually decides C is the fiscal-squeeze threshold. That measurement is in the scenario file, not hidden here.\nRaw data is excluded from version control by design: the archive DOI, not this repository, is the citable container of the retrieved series."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Gains from AI",
+    "section": "",
+    "text": "ImportantNature of this study\n\n\n\nThis is a theoretical scenario study. It is not a forecast. Every probability on this site is a conditional probability under the assumptions listed in the Assumptions Register, computed from a parameter file whose values are, at this version, mostly theoretical placeholders. Changing an assumption changes the numbers.\nDoes AI lift every income, or concentrate it? That is the question, and what this site offers is an answer you can audit rather than one you have to trust: five sectors, one transition model, 55 named assumptions of which 49 are still marked placeholder, 10,000 draws per horizon, and a parameter hash printed under every table, so any number here traces back to the exact choices that produced it."
+  },
+  {
+    "objectID": "index.html#the-question",
+    "href": "index.html#the-question",
+    "title": "The Gains from AI",
+    "section": "The question",
+    "text": "The question\n\nUnder what conditions does AI-driven productivity growth diffuse welfare, and under what conditions does it produce systemic instability?\n\nThe study answers it by building an explicit structure in five sectors (labour, AI profitability, energy, public finance, political stability), seeding it with published statistics, sampling the theoretical choices, and reporting which regions of the resulting state space the samples land in."
+  },
+  {
+    "objectID": "index.html#what-the-numbers-on-this-site-are",
+    "href": "index.html#what-the-numbers-on-this-site-are",
+    "title": "The Gains from AI",
+    "section": "What the numbers on this site are",
+    "text": "What the numbers on this site are\n\n\n\nA probability like 0.424\nthe share of 10,000 parameter draws whose simulated state at that horizon satisfies that scenario’s region\n\n\nA 95% interval\nthe sampling noise of that share (Wilson), not uncertainty about the world\n\n\n“2031” and “2036”\nlabels for t = 5 and t = 10 years after the 2026 reference year\n\n\nData\nWorld Bank WDI observations retrieved on 2026-10-28; latest observation years 2024-2025\n\n\nEverything else\nassumptions, listed in the Assumptions Register"
+  },
+  {
+    "objectID": "index.html#headline-as-computed",
+    "href": "index.html#headline-as-computed",
+    "title": "The Gains from AI",
+    "section": "Headline, as computed",
+    "text": "Headline, as computed\nThe table below is read from the precomputed lookup file written by 02_analysis/scripts/model/build_lookup.py. Nothing is fetched from an API, and nothing is computed in your browser."
+  },
+  {
+    "objectID": "index.html#where-to-go-next",
+    "href": "index.html#where-to-go-next",
+    "title": "The Gains from AI",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nAbout the study: scope, exclusions, limitations, and why the disclaimer wording is mandatory rather than stylistic.\nMethodology: the pipeline, the three epistemic categories, and the validation gates that stop a run.\nScenarios: A, B and C with preconditions, monitored indicators, computed probabilities and falsification conditions.\nData sources: what we retrieved, from where, when, and what is still unverified.\nAssumptions Register: the authoritative list of theoretical choices."
+  },
+  {
+    "objectID": "index.html#reproducing-and-citing",
+    "href": "index.html#reproducing-and-citing",
+    "title": "The Gains from AI",
+    "section": "Reproducing and citing",
+    "text": "Reproducing and citing\nThe analysis source is not published. The transition model, the ingestion scripts, the parameter file and the retrieved data live in a private working repository, by the author’s decision. So the commands below document how the numbers were made; they are not a recipe a visitor can run.\npython 02_analysis/scripts/ingest/build_processed.py   # retrieve and align the inputs\npython 02_analysis/scripts/model/build_lookup.py       # 10,000 draws per horizon -&gt; the JSON\nquarto render 05_website                              # this site\nWhat a reader can still check from here, without the source: the data file the page renders, data/scenario_lookup.json, is served exactly as it was computed, so the table in your browser is the table that came out of the model and not something re-derived on the fly; and every table prints the model_params_hash and model_code_hash of the inputs behind it. What you cannot check is the arithmetic in between. That part is the author’s claim, and it should be cited as one.\nQuote a probability with its model_params_hash, model_code_hash and seed; without them you are quoting a number from a model you cannot name. Text is CC BY 4.0, code is MIT, third-party data remains under its publishers’ terms; the licence text and scope table are in the site repository’s README.md and were written in LICENSE."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the study",
+    "section": "",
+    "text": "Important\n\n\n\nTheoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the Assumptions Register."
+  },
+  {
+    "objectID": "about.html#what-this-study-is",
+    "href": "about.html#what-this-study-is",
+    "title": "About the study",
+    "section": "What this study is",
+    "text": "What this study is\nA scenario study with a reproducible quantitative core. Three named scenarios, one transition model, one parameter file, one Monte Carlo, one lookup table that the site reads.\nResearch question. Under what conditions does AI-driven productivity growth diffuse welfare, and under what conditions does it produce systemic instability?\nMethod in one sentence. Seed a five-sector structural model with published statistics, sample the theoretical choices, and report the share of draws that land in each scenario region at each horizon."
+  },
+  {
+    "objectID": "about.html#what-this-study-refuses-to-do",
+    "href": "about.html#what-this-study-refuses-to-do",
+    "title": "About the study",
+    "section": "What this study refuses to do",
+    "text": "What this study refuses to do\n\nNo forecast. No claim about 2031 or 2036 as calendar outcomes. “2031” is a label for t = 5, and t counts years from a fixed 2026 reference year.\nNo unconditional probability. A number without its conditioning set is not a result of this study, and this site never shows one without the sentence that frames it.\nNo investment, market, or policy advice.\nNo live data. The pages read a precomputed JSON file; the browser calls no API, so a published page cannot silently change underneath a citation.\nNo opinion aggregation. No expert elicitation, no prediction markets, no LLM panels.\nNo hidden parameters. Every coefficient lives in model_params.yaml with an epistemic status, and a run refuses to start if one is missing."
+  },
+  {
+    "objectID": "about.html#the-three-epistemic-categories",
+    "href": "about.html#the-three-epistemic-categories",
+    "title": "About the study",
+    "section": "The three epistemic categories",
+    "text": "The three epistemic categories\n\n\n\n\n\n\n\n\nCategory\nDefinition\nWhere its truth is checked\n\n\n\n\nData (observed)\nA value an agency published about a closed period\n01_data/ and 01_data/metadata/source_register.csv\n\n\nInference (derived)\nA value computed from data by a stated transformation\nthe function that computes it, plus its inputs\n\n\nAssumption (theoretical choice)\nEverything else, including every threshold that defines a scenario\n03_scenarios/assumptions_register.md\n\n\n\nA derived value inherits the weakest status of its inputs. That rule is why a probability built from assumed parameters cannot be presented as data, however clean the algebra."
+  },
+  {
+    "objectID": "about.html#scope",
+    "href": "about.html#scope",
+    "title": "About the study",
+    "section": "Scope",
+    "text": "Scope\nIn: five sector state variables; three scenarios; horizons 1 to 10 years; 10,000 draws; World Bank, IMF, OECD and IEA inputs where retrievable; falsification conditions per scenario.\nOut: forecasting; country-level panels; firm and household heterogeneity; energy engineering; machine-learning estimation of anything; any probability sourced from opinions."
+  },
+  {
+    "objectID": "about.html#limitations-we-would-rather-state-than-have-pointed-out",
+    "href": "about.html#limitations-we-would-rather-state-than-have-pointed-out",
+    "title": "About the study",
+    "section": "Limitations we would rather state than have pointed out",
+    "text": "Limitations we would rather state than have pointed out\n\nL1 Aggregate baseline. World aggregates mask the distributional conflict the study is about. A country-panel replication is expected to give different shares.\nL2 Short history. The structure is calibrated on published data through 2024-2025; structural breaks inside that window are single observations.\nL3 Three scenarios. A state that is not C is not thereby A. The trichotomy is a demarcation, not an exhaustion of possible orders.\nL4 Placeholder parameters. At version 0.2.0, 49 of the 55 parameters carry [PLACEHOLDER: source required], and the remaining 6 are design decisions (two structure switches and four fixed values) that are choices in disguise rather than measurements. The numbers are reproducible; they are not defensible yet.\nL5 Interval myopia. Reported intervals cover Monte Carlo noise only. The sensitivity analysis, not the interval, shows how much of an answer is an assumption: single assumptions move scenario shares by up to 0.41 at t = 10.\nL6 Coincidence is proxied. Scenario C requires co-occurrence. At long horizons the co-occurrence test stops discriminating, which is measured and reported in 03_scenarios/scenario_C_systemic.md section 4 rather than smoothed over."
+  },
+  {
+    "objectID": "about.html#why-the-disclaimer-wording-is-mandatory",
+    "href": "about.html#why-the-disclaimer-wording-is-mandatory",
+    "title": "About the study",
+    "section": "Why the disclaimer wording is mandatory",
+    "text": "Why the disclaimer wording is mandatory\nThe sentence “Theoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the Assumptions Register” is a content rule, enforced in three places so that it survives any single edit:\n\nthe footer and a fixed banner of every rendered page (05_website/_quarto.yml, disclaimer.html);\na disclaimer field inside 05_website/data/scenario_lookup.json, so the number and its framing travel together even in a raw data download;\nmethodology gate G6, which blocks a site build when a probability appears without it.\n\nThe reason is empirical, not aesthetic. In this design the probabilities are functions of the assumption set: with a single threshold moved from its low to its high bound, the probability of systemic instability moves by more than a third. A number separated from that sentence is not a compressed version of the finding; it is a different, false claim."
+  },
+  {
+    "objectID": "about.html#licence-citation-and-the-state-of-the-data",
+    "href": "about.html#licence-citation-and-the-state-of-the-data",
+    "title": "About the study",
+    "section": "Licence, citation, and the state of the data",
+    "text": "Licence, citation, and the state of the data\nText and documentation: CC BY 4.0. Code: MIT. Third-party statistical data: the publishers’ own terms, and we redistribute retrieval metadata and an archive DOI rather than an ownership claim. Machine-readable citation: CITATION.cff in the working repository. Two repositories stand behind this site: https://github.com/sternnick/ai-scenario-discovery-site is the published output, and sternnick/ai-scenario-discovery is the working repository - code, data and model - which is private. Cite the site URL and the commit it was built from; the analysis source is available from the author on request rather than by browsing."
+  },
+  {
+    "objectID": "scenarios.html",
+    "href": "scenarios.html",
+    "title": "Scenarios",
+    "section": "",
+    "text": "Important\n\n\n\nTheoretical scenario study. Not a forecast. The probabilities below are conditional on the assumptions in the Assumptions Register, and at this version most of those assumptions are theoretical placeholders. A share is a property of the model, not of the world."
+  },
+  {
+    "objectID": "scenarios.html#the-three-scenarios",
+    "href": "scenarios.html#the-three-scenarios",
+    "title": "Scenarios",
+    "section": "The three scenarios",
+    "text": "The three scenarios\nEach scenario is written once, as prose, in the repository, and the site is a view of those files. The three regions are mutually exclusive by the rule that assigns them, and the residual case is A - stated as a residual, never as “the good case”.\n\n\n\n\n\n\n\n\n\n\nScenario\nMechanism in one line\nDefined in\n\n\n\n\nA\nControlled diffusion\nstress channels never cross together, so the accumulator decays and gains are institutionally mediated\n03_scenarios/scenario_A_controlled.md (working repository, not public)\n\n\nB\nIncome crisis\nproductivity arrives, the wedge between productivity and median income persists, demand is held up by credit and late transfers\n03_scenarios/scenario_B_income_crisis.md (working repository, not public)\n\n\nC\nSystemic instability\ntwo or more channels cross within the interaction window and the accumulator ratchets\n03_scenarios/scenario_C_systemic.md (working repository, not public)"
+  },
+  {
+    "objectID": "scenarios.html#probabilities-per-sector-and-per-horizon",
+    "href": "scenarios.html#probabilities-per-sector-and-per-horizon",
+    "title": "Scenarios",
+    "section": "Probabilities, per sector and per horizon",
+    "text": "Probabilities, per sector and per horizon\nPick a horizon. The table is the precomputed result for the same 10,000 draws at every horizon (common random numbers), so the shape across horizons is a property of the model rather than of the random stream.\n\n\n\n\n\nReading the rows: within a sector the three scenario probabilities sum to 1, because each sector’s condition is a partition of the draws. The Overall row applies the scenario rule to the whole state and is the row to quote, always with the parameter hash printed under the table."
+  },
+  {
+    "objectID": "scenarios.html#what-the-current-run-says-and-what-it-does-not-say",
+    "href": "scenarios.html#what-the-current-run-says-and-what-it-does-not-say",
+    "title": "Scenarios",
+    "section": "What the current run says, and what it does not say",
+    "text": "What the current run says, and what it does not say\nUnder the current parameter file the model produces a decaying share for A, a share for B that peaks in the middle horizons, and a share for C that grows with the horizon. Two honest notes:\n\nThese numbers replaced author priors, not the other way round. Before the first run the scenario files printed wider, softer bands. The first run fell outside several of them, so the bands were replaced rather than defended (register entry AS-11).\nThe dominant lever is a threshold, not a mechanism. Moving thresholds.fiscal_squeeze_trigger between its declared bounds moves C’s share at t = 10 by about 0.4, which is larger than any sampling interval here by roughly an order of magnitude. The sensitivity table is the honest statement of uncertainty."
+  },
+  {
+    "objectID": "scenarios.html#falsification-per-scenario",
+    "href": "scenarios.html#falsification-per-scenario",
+    "title": "Scenarios",
+    "section": "Falsification, per scenario",
+    "text": "Falsification, per scenario\nEach scenario file lists observable conditions that would show its mechanism is not operating - at least two each, named by indicator rather than by theme. A few examples, in the spirit of “the mechanism is contradicted”, not “the number fell”:\n\nmedian real compensation growth statistically indistinguishable from productivity growth for four consecutive years, which removes B’s wedge mechanism;\nthe aggregate labour share stable or rising while AI capital expenditure rises, which is A’s precondition rather than B’s;\ndata-centre electricity growth exceeding efficiency growth for three consecutive years with capacity prices rising, which is C’s energy trigger, not A’s;\nunrest levels returning to baseline after episodes in high-debt-service economies, which contradicts the ratchet that makes C a regime."
+  },
+  {
+    "objectID": "scenarios.html#what-to-monitor",
+    "href": "scenarios.html#what-to-monitor",
+    "title": "Scenarios",
+    "section": "What to monitor",
+    "text": "What to monitor\nThe indicator tables live in the scenario files. Where a series has been resolved it is named by its publisher’s own code with its latest observation; where it has not, it is marked [TO BE VERIFIED] and tracked in Data sources rather than guessed at."
+  },
+  {
+    "objectID": "assumptions.html",
+    "href": "assumptions.html",
+    "title": "Assumptions Register",
+    "section": "",
+    "text": "Important\n\n\n\nEverything on this page is a theoretical placeholder pending a cited basis, not an empirical finding. Where an entry still has no source, it says so. If a value is neither data nor a derivation from data, it belongs here, and it does not become a fact by appearing in an equation.\nThis page is the published index of the register: which assumptions exist, what kind of reasoning each rests on, and how much the answer moves when one is challenged. The authoritative text - each statement written as it is used in code, with its falsification condition and its dependency links - is 03_scenarios/assumptions_register.md in the working repository, which is not public. Where a reader needs the full entry rather than the index row, ask; the register is documentation, not proprietary machinery, and it can be published on this site on request.\nBasis is the kind of support: data (constrained by observation), theory (a mechanism we adopt), judgment (a choice we must defend in prose). Confidence is a sensitivity grade, not a truth grade: low means “attack this one first”."
+  },
+  {
+    "objectID": "assumptions.html#why-so-many-low-grades",
+    "href": "assumptions.html#why-so-many-low-grades",
+    "title": "Assumptions Register",
+    "section": "Why so many low grades",
+    "text": "Why so many low grades"
+  },
+  {
+    "objectID": "assumptions.html#how-to-read-the-numbers-on-this-page",
+    "href": "assumptions.html#how-to-read-the-numbers-on-this-page",
+    "title": "Assumptions Register",
+    "section": "How to read the numbers on this page",
+    "text": "How to read the numbers on this page\nTwo numbers appear next to every probability here, and they mean opposite things. The Wilson interval (about +-0.01 at N = 10,000) measures only sampling noise: it says how precisely this run estimated the share of draws that landed in a scenario region, and it shrinks if we run more draws of the same assumptions - it says nothing about whether those assumptions are right. The sensitivity swing (up to 0.36 at t = 10) measures how far the answer moves when one assumption is moved across the range its own register entry declares: that is structural uncertainty, and it does not shrink with more draws, only with better evidence. So quote the swing, not the interval, when describing uncertainty - a table whose intervals are narrow is a table that has been computed carefully, not a table that is safe to believe. The swings below are one-at-a-time perturbations of the parameters in model_params.yaml, so they do not add up and they do not describe joint moves.\nThe one-at-a-time run at t = 10 (02_analysis/outputs/sensitivity_t10.csv) reports the largest swings as:\n\n\n\nParameter\nLargest swing in a scenario share at t = 10\n\n\n\n\nai_profitability.diffusion_speed (AS-02)\n0.36\n\n\nenergy.rebound_coefficient (AS-05)\n0.32\n\n\nthresholds.fiscal_squeeze_trigger (AS-12)\n0.28\n\n\nai_profitability.diffusion_ceiling (AS-02)\n0.25\n\n\npolitical_stability.fiscal_sensitivity (AS-08)\n0.21\n\n\nenergy.demand_elasticity (AS-06)\n0.21\n\n\n\nA low confidence grade is therefore not modesty for its own sake: it names the entries whose resolution would actually change the study’s conclusion. Two of the six parameters in the table (AS-05 rebound, AS-06 demand elasticity) are the kind of number that could in principle be measured; the diffusion parameters (AS-02) can only be argued from earlier general-purpose technologies, which is a judgment about historical analogy, not a measurement."
+  },
+  {
+    "objectID": "assumptions.html#changing-something-here",
+    "href": "assumptions.html#changing-something-here",
+    "title": "Assumptions Register",
+    "section": "Changing something here",
+    "text": "Changing something here\n\nAdd or edit the register row first, with a basis and a falsification condition.\nSet the value in model_params.yaml, which refuses to load if the register ID is missing.\nRecord the change in 00_docs/04_changelog.md with the old and new value.\nRe-run build_lookup.py; the model_params_hash changes, and with it every probability.\n\nQuoting an old probability after an edit is a citation error, not a rounding difference."
+  }
+]

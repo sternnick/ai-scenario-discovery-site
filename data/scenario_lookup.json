@@ -1,0 +1,1649 @@
+{
+  "assumptions_register": "03_scenarios/assumptions_register.md",
+  "baseline_sha256": "cb87a0f0e466ca443a22e3a2e43009b3c76300ec8e79246364d8f0d1267cee82",
+  "ci_level": 0.95,
+  "ci_method": "wilson",
+  "data": {
+    "1": {
+      "horizon_years": 1,
+      "label": "t+1",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.75839,
+            "ci_low": 0.741418,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.75
+          },
+          "B": {
+            "ci_high": 0.25838,
+            "ci_low": 0.241413,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.2498
+          },
+          "C": {
+            "ci_high": 0.000729,
+            "ci_low": 5.5e-05,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.0002
+          },
+          "index": {
+            "mean": 1.005526,
+            "p10": 0.99593,
+            "p90": 1.017369
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.615336,
+            "ci_low": 0.596183,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.6058
+          },
+          "B": {
+            "ci_high": 0.402512,
+            "ci_low": 0.383371,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.3929
+          },
+          "C": {
+            "ci_high": 0.002223,
+            "ci_low": 0.00076,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.0013
+          },
+          "index": {
+            "mean": 0.989964,
+            "p10": 0.938145,
+            "p90": 1.037956
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.945547,
+            "ci_low": 0.936314,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.9411
+          },
+          "B": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.0
+          },
+          "C": {
+            "ci_high": 0.063686,
+            "ci_low": 0.054453,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.0589
+          },
+          "index": {
+            "mean": 1.072637,
+            "p10": 1.043821,
+            "p90": 1.108104
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 1.0,
+            "ci_low": 0.999616,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 1.0
+          },
+          "B": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0
+          },
+          "C": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 1.0,
+            "ci_low": 0.999616,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 1.0
+          },
+          "B": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.0
+          },
+          "C": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.0
+          },
+          "index": {
+            "mean": 0.99657,
+            "p10": 0.98932,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 1.0,
+            "ci_low": 0.999616,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 1.0
+          },
+          "B": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0
+          },
+          "C": {
+            "ci_high": 0.000384,
+            "ci_low": 0.0,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.0
+          },
+          "index": {
+            "mean": 0.99869,
+            "p10": 0.994032,
+            "p90": 1.003575
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.033379,
+        "income_wedge_mean": 0.002902,
+        "instability_mean": 0.00343,
+        "overall_counts": {
+          "A": 10000,
+          "B": 0,
+          "C": 0
+        }
+      }
+    },
+    "10": {
+      "horizon_years": 10,
+      "label": "2036",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.063582,
+            "ci_low": 0.054356,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.0588
+          },
+          "B": {
+            "ci_high": 0.341394,
+            "ci_low": 0.322935,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.3321
+          },
+          "C": {
+            "ci_high": 0.61862,
+            "ci_low": 0.599496,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.6091
+          },
+          "index": {
+            "mean": 0.785532,
+            "p10": 0.583298,
+            "p90": 0.967675
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.230353,
+            "ci_low": 0.214061,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2221
+          },
+          "B": {
+            "ci_high": 0.198416,
+            "ci_low": 0.183021,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.1906
+          },
+          "C": {
+            "ci_high": 0.596914,
+            "ci_low": 0.577619,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.5873
+          },
+          "index": {
+            "mean": 1.884275,
+            "p10": 0.8346,
+            "p90": 3.365307
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.480492,
+            "ci_low": 0.46093,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.4707
+          },
+          "B": {
+            "ci_high": 0.514796,
+            "ci_low": 0.495201,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.505
+          },
+          "C": {
+            "ci_high": 0.027506,
+            "ci_low": 0.02146,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.0243
+          },
+          "index": {
+            "mean": 1.859828,
+            "p10": 1.624587,
+            "p90": 2.11576
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.085995,
+            "ci_low": 0.075327,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0805
+          },
+          "B": {
+            "ci_high": 0.360108,
+            "ci_low": 0.341406,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.3507
+          },
+          "C": {
+            "ci_high": 0.578478,
+            "ci_low": 0.559069,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.5688
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.392069,
+            "ci_low": 0.373021,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.3825
+          },
+          "B": {
+            "ci_high": 0.213126,
+            "ci_low": 0.1973,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.2051
+          },
+          "C": {
+            "ci_high": 0.42208,
+            "ci_low": 0.402787,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.4124
+          },
+          "index": {
+            "mean": 0.656188,
+            "p10": 0.23786,
+            "p90": 0.989956
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.159272,
+            "ci_low": 0.145195,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.1521
+          },
+          "B": {
+            "ci_high": 0.020476,
+            "ci_low": 0.015295,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0177
+          },
+          "C": {
+            "ci_high": 0.837432,
+            "ci_low": 0.822715,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.8302
+          },
+          "index": {
+            "mean": 0.805904,
+            "p10": 0.671306,
+            "p90": 0.923787
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.466049,
+        "income_wedge_mean": 0.06558,
+        "instability_mean": 0.343812,
+        "overall_counts": {
+          "A": 805,
+          "B": 3507,
+          "C": 5688
+        }
+      }
+    },
+    "2": {
+      "horizon_years": 2,
+      "label": "t+2",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.576185,
+            "ci_low": 0.556764,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.5665
+          },
+          "B": {
+            "ci_high": 0.435017,
+            "ci_low": 0.415641,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.4253
+          },
+          "C": {
+            "ci_high": 0.010166,
+            "ci_low": 0.006612,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.0082
+          },
+          "index": {
+            "mean": 1.002806,
+            "p10": 0.978952,
+            "p90": 1.028066
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.515995,
+            "ci_low": 0.4964,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.5062
+          },
+          "B": {
+            "ci_high": 0.471884,
+            "ci_low": 0.452345,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.4621
+          },
+          "C": {
+            "ci_high": 0.035318,
+            "ci_low": 0.028442,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.0317
+          },
+          "index": {
+            "mean": 1.009194,
+            "p10": 0.89885,
+            "p90": 1.120289
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.892081,
+            "ci_low": 0.879622,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.886
+          },
+          "B": {
+            "ci_high": 0.002349,
+            "ci_low": 0.000834,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.0014
+          },
+          "C": {
+            "ci_high": 0.118945,
+            "ci_low": 0.106553,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.1126
+          },
+          "index": {
+            "mean": 1.155006,
+            "p10": 1.094634,
+            "p90": 1.230242
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.982379,
+            "ci_low": 0.976853,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.9798
+          },
+          "B": {
+            "ci_high": 0.019189,
+            "ci_low": 0.014182,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0165
+          },
+          "C": {
+            "ci_high": 0.005096,
+            "ci_low": 0.002686,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0037
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.996119,
+            "ci_low": 0.993301,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.9949
+          },
+          "B": {
+            "ci_high": 0.006358,
+            "ci_low": 0.003622,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.0048
+          },
+          "C": {
+            "ci_high": 0.000882,
+            "ci_low": 0.000102,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.0003
+          },
+          "index": {
+            "mean": 0.988987,
+            "p10": 0.965419,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.993923,
+            "ci_low": 0.990499,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.9924
+          },
+          "B": {
+            "ci_high": 0.000566,
+            "ci_low": 1.8e-05,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0001
+          },
+          "C": {
+            "ci_high": 0.00939,
+            "ci_low": 0.005988,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.0075
+          },
+          "index": {
+            "mean": 0.992292,
+            "p10": 0.980214,
+            "p90": 1.003679
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.076515,
+        "income_wedge_mean": 0.008614,
+        "instability_mean": 0.011013,
+        "overall_counts": {
+          "A": 9798,
+          "B": 165,
+          "C": 37
+        }
+      }
+    },
+    "3": {
+      "horizon_years": 3,
+      "label": "t+3",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.422983,
+            "ci_low": 0.403684,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.4133
+          },
+          "B": {
+            "ci_high": 0.55943,
+            "ci_low": 0.539931,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.5497
+          },
+          "C": {
+            "ci_high": 0.040881,
+            "ci_low": 0.033475,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.037
+          },
+          "index": {
+            "mean": 0.990022,
+            "p10": 0.942254,
+            "p90": 1.032295
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.42549,
+            "ci_low": 0.406174,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.4158
+          },
+          "B": {
+            "ci_high": 0.47789,
+            "ci_low": 0.458334,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.4681
+          },
+          "C": {
+            "ci_high": 0.122527,
+            "ci_low": 0.109968,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.1161
+          },
+          "index": {
+            "mean": 1.066465,
+            "p10": 0.876581,
+            "p90": 1.299925
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.830356,
+            "ci_low": 0.815396,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.823
+          },
+          "B": {
+            "ci_high": 0.015631,
+            "ci_low": 0.011143,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.0132
+          },
+          "C": {
+            "ci_high": 0.171183,
+            "ci_low": 0.156676,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.1638
+          },
+          "index": {
+            "mean": 1.246682,
+            "p10": 1.154064,
+            "p90": 1.36303
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.870775,
+            "ci_low": 0.857346,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.8642
+          },
+          "B": {
+            "ci_high": 0.11403,
+            "ci_low": 0.101872,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.1078
+          },
+          "C": {
+            "ci_high": 0.031419,
+            "ci_low": 0.024943,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.028
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.972789,
+            "ci_low": 0.966051,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.9696
+          },
+          "B": {
+            "ci_high": 0.026869,
+            "ci_low": 0.020897,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.0237
+          },
+          "C": {
+            "ci_high": 0.008499,
+            "ci_low": 0.00528,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.0067
+          },
+          "index": {
+            "mean": 0.974536,
+            "p10": 0.922451,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.940535,
+            "ci_low": 0.93093,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.9359
+          },
+          "B": {
+            "ci_high": 0.003087,
+            "ci_low": 0.001295,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.002
+          },
+          "C": {
+            "ci_high": 0.067,
+            "ci_low": 0.057536,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.0621
+          },
+          "index": {
+            "mean": 0.979884,
+            "p10": 0.955459,
+            "p90": 1.000466
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.129355,
+        "income_wedge_mean": 0.015959,
+        "instability_mean": 0.025464,
+        "overall_counts": {
+          "A": 8642,
+          "B": 1078,
+          "C": 280
+        }
+      }
+    },
+    "4": {
+      "horizon_years": 4,
+      "label": "t+4",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.294938,
+            "ci_low": 0.277227,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.286
+          },
+          "B": {
+            "ci_high": 0.62071,
+            "ci_low": 0.601605,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.6112
+          },
+          "C": {
+            "ci_high": 0.108906,
+            "ci_low": 0.096999,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.1028
+          },
+          "index": {
+            "mean": 0.967954,
+            "p10": 0.891823,
+            "p90": 1.030643
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.353067,
+            "ci_low": 0.334453,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.3437
+          },
+          "B": {
+            "ci_high": 0.440029,
+            "ci_low": 0.420624,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.4303
+          },
+          "C": {
+            "ci_high": 0.234302,
+            "ci_low": 0.217909,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.226
+          },
+          "index": {
+            "mean": 1.160344,
+            "p10": 0.867307,
+            "p90": 1.558658
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.746921,
+            "ci_low": 0.729695,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.7384
+          },
+          "B": {
+            "ci_high": 0.052366,
+            "ci_low": 0.043981,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.048
+          },
+          "C": {
+            "ci_high": 0.221742,
+            "ci_low": 0.205678,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.2136
+          },
+          "index": {
+            "mean": 1.344104,
+            "p10": 1.22075,
+            "p90": 1.497274
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.683714,
+            "ci_low": 0.665352,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.6746
+          },
+          "B": {
+            "ci_high": 0.244524,
+            "ci_low": 0.227879,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.2361
+          },
+          "C": {
+            "ci_high": 0.095048,
+            "ci_low": 0.083867,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.0893
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.917687,
+            "ci_low": 0.906597,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.9123
+          },
+          "B": {
+            "ci_high": 0.060472,
+            "ci_low": 0.051469,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.0558
+          },
+          "C": {
+            "ci_high": 0.035528,
+            "ci_low": 0.028631,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.0319
+          },
+          "index": {
+            "mean": 0.947432,
+            "p10": 0.839662,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.825735,
+            "ci_low": 0.810621,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.8183
+          },
+          "B": {
+            "ci_high": 0.006699,
+            "ci_low": 0.003881,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0051
+          },
+          "C": {
+            "ci_high": 0.184198,
+            "ci_low": 0.169251,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.1766
+          },
+          "index": {
+            "mean": 0.961548,
+            "p10": 0.921835,
+            "p90": 0.994449
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.189183,
+        "income_wedge_mean": 0.024441,
+        "instability_mean": 0.052568,
+        "overall_counts": {
+          "A": 6746,
+          "B": 2361,
+          "C": 893
+        }
+      }
+    },
+    "5": {
+      "horizon_years": 5,
+      "label": "2031",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.207447,
+            "ci_low": 0.191784,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.1995
+          },
+          "B": {
+            "ci_high": 0.61862,
+            "ci_low": 0.599496,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.6091
+          },
+          "C": {
+            "ci_high": 0.199228,
+            "ci_low": 0.183809,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.1914
+          },
+          "index": {
+            "mean": 0.938929,
+            "p10": 0.834083,
+            "p90": 1.023257
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.300688,
+            "ci_low": 0.282872,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2917
+          },
+          "B": {
+            "ci_high": 0.376597,
+            "ci_low": 0.357705,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.3671
+          },
+          "C": {
+            "ci_high": 0.350552,
+            "ci_low": 0.33197,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.3412
+          },
+          "index": {
+            "mean": 1.281468,
+            "p10": 0.865142,
+            "p90": 1.866152
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.669023,
+            "ci_low": 0.650454,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.6598
+          },
+          "B": {
+            "ci_high": 0.116283,
+            "ci_low": 0.104017,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.11
+          },
+          "C": {
+            "ci_high": 0.238553,
+            "ci_low": 0.222054,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.2302
+          },
+          "index": {
+            "mean": 1.442849,
+            "p10": 1.29251,
+            "p90": 1.624365
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.489097,
+            "ci_low": 0.469518,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.4793
+          },
+          "B": {
+            "ci_high": 0.354777,
+            "ci_low": 0.336141,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.3454
+          },
+          "C": {
+            "ci_high": 0.182877,
+            "ci_low": 0.167973,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.1753
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.833501,
+            "ci_low": 0.818648,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.8262
+          },
+          "B": {
+            "ci_high": 0.101519,
+            "ci_low": 0.089991,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.0956
+          },
+          "C": {
+            "ci_high": 0.083626,
+            "ci_low": 0.073098,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.0782
+          },
+          "index": {
+            "mean": 0.906017,
+            "p10": 0.697175,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.66942,
+            "ci_low": 0.650857,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.6602
+          },
+          "B": {
+            "ci_high": 0.011708,
+            "ci_low": 0.007868,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0096
+          },
+          "C": {
+            "ci_high": 0.339481,
+            "ci_low": 0.321049,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.3302
+          },
+          "index": {
+            "mean": 0.938287,
+            "p10": 0.882179,
+            "p90": 0.985159
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.251492,
+        "income_wedge_mean": 0.033418,
+        "instability_mean": 0.093983,
+        "overall_counts": {
+          "A": 4793,
+          "B": 3454,
+          "C": 1753
+        }
+      }
+    },
+    "6": {
+      "horizon_years": 6,
+      "label": "t+6",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.146939,
+            "ci_low": 0.133337,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.14
+          },
+          "B": {
+            "ci_high": 0.576883,
+            "ci_low": 0.557465,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.5672
+          },
+          "C": {
+            "ci_high": 0.301797,
+            "ci_low": 0.283962,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.2928
+          },
+          "index": {
+            "mean": 0.906107,
+            "p10": 0.777592,
+            "p90": 1.013447
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.263434,
+            "ci_low": 0.246355,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2548
+          },
+          "B": {
+            "ci_high": 0.318632,
+            "ci_low": 0.300514,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.3095
+          },
+          "C": {
+            "ci_high": 0.445441,
+            "ci_low": 0.426008,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.4357
+          },
+          "index": {
+            "mean": 1.417127,
+            "p10": 0.863987,
+            "p90": 2.186514
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.610756,
+            "ci_low": 0.591566,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.6012
+          },
+          "B": {
+            "ci_high": 0.190598,
+            "ci_low": 0.175445,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.1829
+          },
+          "C": {
+            "ci_high": 0.224072,
+            "ci_low": 0.207946,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.2159
+          },
+          "index": {
+            "mean": 1.538698,
+            "p10": 1.364984,
+            "p90": 1.740068
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.325886,
+            "ci_low": 0.307654,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.3167
+          },
+          "B": {
+            "ci_high": 0.412749,
+            "ci_low": 0.393525,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.4031
+          },
+          "C": {
+            "ci_high": 0.289085,
+            "ci_low": 0.271484,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.2802
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.729605,
+            "ci_low": 0.712025,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.7209
+          },
+          "B": {
+            "ci_high": 0.139388,
+            "ci_low": 0.126094,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.1326
+          },
+          "C": {
+            "ci_high": 0.153566,
+            "ci_low": 0.139705,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.1465
+          },
+          "index": {
+            "mean": 0.852566,
+            "p10": 0.527168,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.507499,
+            "ci_low": 0.487903,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.4977
+          },
+          "B": {
+            "ci_high": 0.01628,
+            "ci_low": 0.011693,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0138
+          },
+          "C": {
+            "ci_high": 0.4983,
+            "ci_low": 0.478709,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.4885
+          },
+          "index": {
+            "mean": 0.911785,
+            "p10": 0.838795,
+            "p90": 0.973755
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.311296,
+        "income_wedge_mean": 0.042176,
+        "instability_mean": 0.147434,
+        "overall_counts": {
+          "A": 3167,
+          "B": 4031,
+          "C": 2802
+        }
+      }
+    },
+    "7": {
+      "horizon_years": 7,
+      "label": "t+7",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.111673,
+            "ci_low": 0.09963,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.1055
+          },
+          "B": {
+            "ci_high": 0.514396,
+            "ci_low": 0.494801,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.5046
+          },
+          "C": {
+            "ci_high": 0.3995,
+            "ci_low": 0.380385,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.3899
+          },
+          "index": {
+            "mean": 0.872777,
+            "p10": 0.72113,
+            "p90": 1.002628
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.242905,
+            "ci_low": 0.226299,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2345
+          },
+          "B": {
+            "ci_high": 0.277577,
+            "ci_low": 0.260201,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.2688
+          },
+          "C": {
+            "ci_high": 0.506499,
+            "ci_low": 0.486904,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.4967
+          },
+          "index": {
+            "mean": 1.552836,
+            "p10": 0.860704,
+            "p90": 2.521297
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.56771,
+            "ci_low": 0.548246,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.558
+          },
+          "B": {
+            "ci_high": 0.282827,
+            "ci_low": 0.265346,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.274
+          },
+          "C": {
+            "ci_high": 0.175455,
+            "ci_low": 0.1608,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.168
+          },
+          "index": {
+            "mean": 1.628485,
+            "p10": 1.433858,
+            "p90": 1.847123
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.213228,
+            "ci_low": 0.197399,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.2052
+          },
+          "B": {
+            "ci_high": 0.426092,
+            "ci_low": 0.406772,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.4164
+          },
+          "C": {
+            "ci_high": 0.387951,
+            "ci_low": 0.368943,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.3784
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.62479,
+            "ci_low": 0.605722,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.6153
+          },
+          "B": {
+            "ci_high": 0.163956,
+            "ci_low": 0.149707,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.1567
+          },
+          "C": {
+            "ci_high": 0.236326,
+            "ci_low": 0.219882,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.228
+          },
+          "index": {
+            "mean": 0.794471,
+            "p10": 0.409368,
+            "p90": 1.0
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.373179,
+            "ci_low": 0.354325,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.3637
+          },
+          "B": {
+            "ci_high": 0.017899,
+            "ci_low": 0.013074,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0153
+          },
+          "C": {
+            "ci_high": 0.63046,
+            "ci_low": 0.611447,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.621
+          },
+          "index": {
+            "mean": 0.884031,
+            "p10": 0.794888,
+            "p90": 0.961381
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.364185,
+        "income_wedge_mean": 0.050052,
+        "instability_mean": 0.205529,
+        "overall_counts": {
+          "A": 2052,
+          "B": 4164,
+          "C": 3784
+        }
+      }
+    },
+    "8": {
+      "horizon_years": 8,
+      "label": "t+8",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.089495,
+            "ci_low": 0.078625,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.0839
+          },
+          "B": {
+            "ci_high": 0.450452,
+            "ci_low": 0.430994,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.4407
+          },
+          "C": {
+            "ci_high": 0.485196,
+            "ci_low": 0.465623,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.4754
+          },
+          "index": {
+            "mean": 0.841155,
+            "p10": 0.669214,
+            "p90": 0.990588
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.234909,
+            "ci_low": 0.218501,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2266
+          },
+          "B": {
+            "ci_high": 0.241792,
+            "ci_low": 0.225213,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.2334
+          },
+          "C": {
+            "ci_high": 0.549751,
+            "ci_low": 0.530218,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.54
+          },
+          "index": {
+            "mean": 1.677664,
+            "p10": 0.854782,
+            "p90": 2.83946
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.535275,
+            "ci_low": 0.515705,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.5255
+          },
+          "B": {
+            "ci_high": 0.374184,
+            "ci_low": 0.355319,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.3647
+          },
+          "C": {
+            "ci_high": 0.116078,
+            "ci_low": 0.103822,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.1098
+          },
+          "index": {
+            "mean": 1.711138,
+            "p10": 1.500106,
+            "p90": 1.944553
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.148163,
+            "ci_low": 0.134513,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.1412
+          },
+          "B": {
+            "ci_high": 0.416061,
+            "ci_low": 0.396811,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.4064
+          },
+          "C": {
+            "ci_high": 0.462172,
+            "ci_low": 0.442665,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.4524
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.529782,
+            "ci_low": 0.510202,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.52
+          },
+          "B": {
+            "ci_high": 0.19009,
+            "ci_low": 0.174954,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.1824
+          },
+          "C": {
+            "ci_high": 0.306637,
+            "ci_low": 0.288718,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.2976
+          },
+          "index": {
+            "mean": 0.741565,
+            "p10": 0.3378,
+            "p90": 0.999276
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.27384,
+            "ci_low": 0.25654,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.2651
+          },
+          "B": {
+            "ci_high": 0.021332,
+            "ci_low": 0.016038,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0185
+          },
+          "C": {
+            "ci_high": 0.72515,
+            "ci_low": 0.707484,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.7164
+          },
+          "index": {
+            "mean": 0.856673,
+            "p10": 0.751373,
+            "p90": 0.948584
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.407414,
+        "income_wedge_mean": 0.056585,
+        "instability_mean": 0.258435,
+        "overall_counts": {
+          "A": 1412,
+          "B": 4064,
+          "C": 4524
+        }
+      }
+    },
+    "9": {
+      "horizon_years": 9,
+      "label": "t+9",
+      "sectors": {
+        "ai_profitability": {
+          "A": {
+            "ci_high": 0.074651,
+            "ci_low": 0.064679,
+            "condition": "return on AI capital at or above its t=0 level, channel quiet",
+            "probability": 0.0695
+          },
+          "B": {
+            "ci_high": 0.392069,
+            "ci_low": 0.373021,
+            "condition": "return compressed below its t=0 level, channel quiet",
+            "probability": 0.3825
+          },
+          "C": {
+            "ci_high": 0.557734,
+            "ci_low": 0.538229,
+            "condition": "profitability channel at or beyond the collapse trigger",
+            "probability": 0.548
+          },
+          "index": {
+            "mean": 0.812076,
+            "p10": 0.623605,
+            "p90": 0.979333
+          }
+        },
+        "energy": {
+          "A": {
+            "ci_high": 0.231365,
+            "ci_low": 0.215047,
+            "condition": "energy cost index at or below its t=0 level, channel quiet",
+            "probability": 0.2231
+          },
+          "B": {
+            "ci_high": 0.217283,
+            "ci_low": 0.201341,
+            "condition": "energy cost elevated, channel still below its trigger",
+            "probability": 0.2092
+          },
+          "C": {
+            "ci_high": 0.577382,
+            "ci_low": 0.557966,
+            "condition": "energy channel at or beyond the cost trigger",
+            "probability": 0.5677
+          },
+          "index": {
+            "mean": 1.787742,
+            "p10": 0.846162,
+            "p90": 3.117559
+          }
+        },
+        "labour": {
+          "A": {
+            "ci_high": 0.507999,
+            "ci_low": 0.488403,
+            "condition": "distributional wedge below income_wedge_b and the labour channel quiet",
+            "probability": 0.4982
+          },
+          "B": {
+            "ci_high": 0.454659,
+            "ci_low": 0.435183,
+            "condition": "wedge at or above income_wedge_b without a labour-channel trigger",
+            "probability": 0.4449
+          },
+          "C": {
+            "ci_high": 0.061613,
+            "ci_low": 0.052528,
+            "condition": "labour-channel stress at or beyond its trigger",
+            "probability": 0.0569
+          },
+          "index": {
+            "mean": 1.78768,
+            "p10": 1.562894,
+            "p90": 2.033394
+          }
+        },
+        "overall": {
+          "A": {
+            "ci_high": 0.110341,
+            "ci_low": 0.098363,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.1042
+          },
+          "B": {
+            "ci_high": 0.388553,
+            "ci_low": 0.36954,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.379
+          },
+          "C": {
+            "ci_high": 0.526586,
+            "ci_low": 0.507001,
+            "condition": "scenario_rule(state) returns this label",
+            "probability": 0.5168
+          }
+        },
+        "political_stability": {
+          "A": {
+            "ci_high": 0.45486,
+            "ci_low": 0.435382,
+            "condition": "accumulated stress below half the instability boundary",
+            "probability": 0.4451
+          },
+          "B": {
+            "ci_high": 0.201969,
+            "ci_low": 0.186466,
+            "condition": "accumulated stress between half the boundary and the boundary",
+            "probability": 0.1941
+          },
+          "C": {
+            "ci_high": 0.370264,
+            "ci_low": 0.351443,
+            "condition": "accumulated stress at or beyond the instability boundary",
+            "probability": 0.3608
+          },
+          "index": {
+            "mean": 0.69518,
+            "p10": 0.280524,
+            "p90": 0.996073
+          }
+        },
+        "public_finance": {
+          "A": {
+            "ci_high": 0.205824,
+            "ci_low": 0.190208,
+            "condition": "fiscal space above the squeeze trigger",
+            "probability": 0.1979
+          },
+          "B": {
+            "ci_high": 0.018974,
+            "ci_low": 0.013997,
+            "condition": "fiscal space at or below the squeeze trigger, channel quiet",
+            "probability": 0.0163
+          },
+          "C": {
+            "ci_high": 0.793731,
+            "ci_low": 0.77765,
+            "condition": "fiscal channel at or beyond its trigger",
+            "probability": 0.7858
+          },
+          "index": {
+            "mean": 0.830563,
+            "p10": 0.709813,
+            "p90": 0.93585
+          }
+        }
+      },
+      "summary": {
+        "diffusion_share_mean": 0.440855,
+        "income_wedge_mean": 0.061697,
+        "instability_mean": 0.30482,
+        "overall_counts": {
+          "A": 1042,
+          "B": 3790,
+          "C": 5168
+        }
+      }
+    }
+  },
+  "disclaimer": "Theoretical scenario study. Not a forecast. Probabilities are conditional on assumptions listed in the Assumptions Register.",
+  "generated_at": "2026-10-30T12:03:29Z",
+  "git_commit": "d7f9faf583ea67d191e1319cd4054f893dc959a0",
+  "horizon_labels": {
+    "10": "2036",
+    "5": "2031"
+  },
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "interpretation": "probability is the share of draws from the stated parameter distributions whose simulated state at this horizon falls in the named region. It is not a forecast, not a frequency of the real world, and changes when any assumption in 03_scenarios/assumptions_register.md changes.",
+  "model_code_hash": "a76ef70a351b31dde711bdee9b3207d6e384cf4b4ff217abb5744fb923c3e923",
+  "model_name": "ai-gains-transition",
+  "model_params_hash": "aa8122549df78ea293c36ea74cba925f15ec9ae81d9cbda421a87b380d2573a2",
+  "model_version": "0.1.0",
+  "n_draws": 10000,
+  "n_parameters_sampled": 55,
+  "parameter_placeholders": true,
+  "placeholder_note": "Every numeric parameter is a theoretical placeholder until the Assumptions Register entries are resolved. Quoting a number from this file without that sentence is a citation error.",
+  "reference_area": "WLD",
+  "reference_year": 2026,
+  "seed": 20261028
+}

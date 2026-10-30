@@ -1,0 +1,20 @@
+<!-- Persistent disclaimer. Rendered on every page via include-after-body in _quarto.yml.
+     It is fixed rather than inline so that a screenshot of any table on any page still
+     carries the sentence that makes the numbers meaningful. -->
+<div id="not-a-forecast-banner" role="note" aria-label="Nature of this study">
+  <span class="banner-label">Theoretical scenario study. Not a forecast.</span>
+  Probabilities are conditional on assumptions listed in the Assumptions Register.
+  <a href="assumptions.qmd">Register</a>
+  <a href="about.qmd">Why this wording is mandatory</a>
+  <button type="button" aria-label="Dismiss banner"
+          onclick="document.getElementById('not-a-forecast-banner').classList.add('dismissed')">&times;</button>
+</div>
+<script>
+  // One banner per browser session, not one per page load: the point is that the sentence
+  // is never absent from a reader's view of a probability, not that it is annoying.
+  if (sessionStorage.getItem("banner-dismissed") === "1") {
+    document.getElementById("not-a-forecast-banner").classList.add("dismissed");
+  }
+  document.querySelector("#not-a-forecast-banner button")
+    .addEventListener("click", function () { sessionStorage.setItem("banner-dismissed", "1"); });
+</script>
